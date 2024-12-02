@@ -1,3 +1,5 @@
+#This one doesn't work, use part2v2
+
 def safe(text):
     foundIncreasingOrDecreasing = False
     problemDampened = False

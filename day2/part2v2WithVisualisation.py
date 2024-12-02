@@ -1,4 +1,5 @@
 import pygame as pg
+import pygame.font as font
 
 def descending(inputText, problemDampened = False):
 
@@ -76,9 +77,24 @@ def safe(text):
 
 def initPygame():
     pg.init()
-    global screen
+    font.init()
 
+    global screen
     screen = pg.display.set_mode((0, 0), pg.FULLSCREEN)
+
+    global ycoord
+    ycoord = 0
+
+    global xcoord
+    xcoord = 0
+
+    global fontSize
+    fontSize = 12
+
+    global textFont
+    textFont = font.Font(None, fontSize)
+
+initPygame()
 
 with open("input.txt", "r") as inputText:
     data = inputText.readlines()
@@ -86,11 +102,34 @@ with open("input.txt", "r") as inputText:
     amountSafe = 0
 
     for i in data:
+        if ycoord >= screen.get_height():
+            ycoord = 0
+            xcoord += screen.get_width() * 1/15
+
         if safe([int(j) for j in i.split()]):
             amountSafe += 1
-            
+            text_surface = textFont.render(i, True, (0, 255, 0))
+
+            screen.blit(text_surface, (xcoord, ycoord))
+
+            ycoord += fontSize
 
         else:
-            pass
+            text_surface = textFont.render(i, True, (255, 0, 0))
+
+            screen.blit(text_surface, (xcoord, ycoord))
+
+            ycoord += fontSize
+            
+        pg.display.flip()
 
     print(amountSafe)
+
+
+    while True:
+        for event in pg.event.get():
+            if event.type == pg.QUIT:
+                pg.quit()
+                quit()
+
+            pg.display.flip()
