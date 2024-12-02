@@ -14,7 +14,7 @@ def safe(text):
     
     return True
 
-with open("inputText.txt", "r") as inputText:
+with open("input.txt", "r") as inputText:
     data = inputText.readlines()
 
     amountSafe = 0

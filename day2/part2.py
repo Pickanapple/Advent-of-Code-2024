@@ -15,7 +15,7 @@ def safe(text):
                         return False
                     else:
                         problemDampened = True
-                        text.pop(i + 1)
+                        text.pop(i)
                         i -= 1
 
                 i += 1
@@ -30,7 +30,7 @@ def safe(text):
                         return False
                     else:
                         problemDampened = True
-                        text.pop(i + 1)
+                        text.pop(i)
                         i -= 1
 
                 i += 1
