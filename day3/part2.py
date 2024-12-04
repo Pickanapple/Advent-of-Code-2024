@@ -3,14 +3,15 @@ from os import system
 def mul(contents, enabled):
     total = 0
     
-    while "mul" in contents: 
+    while "mul" in contents or "do" in contents or "don't()" in contents: 
         while enabled and "mul" in contents: 
             location = contents.find("mul")
             disableLocation = contents.find("don't()")
 
             if disableLocation < location:
-                enabled = False
-                continue
+                if disableLocation > -1:
+                    enabled = False
+                    continue
 
             num1, num2 = "0", "0"
 
