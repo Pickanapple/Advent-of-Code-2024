@@ -3,8 +3,10 @@ from os import system
 def mul(contents, enabled):
     total = 0
     
-    while "mul" in contents or "do" in contents or "don't()" in contents: 
-        while enabled and "mul" in contents: 
+    while ("mul" in contents and enabled) or ("do()" in contents and not enabled) or ("don't()" in contents and enabled): 
+        switchedThisTimeRound = False
+
+        while "mul" in contents and enabled: 
             location = contents.find("mul")
             disableLocation = contents.find("don't()")
 
@@ -52,11 +54,22 @@ def mul(contents, enabled):
             if found:
                 total += int(num1) * int(num2)
         
-        while not enabled and "do()" in contents:
+        while not enabled and "do()" in contents and not switchedThisTimeRound:
+            switchedThisTimeRound = True
+
             newLocation = contents.find("do()")
             enabled = True
             
             contents = contents[newLocation:]
+
+        while enabled and "don't()" in contents and not switchedThisTimeRound:
+            switchedThisTimeRound = True
+
+            newLocation = contents.find("don't()")
+            enabled = False
+            
+            contents = contents[newLocation:]
+            pass
 
     return total, enabled
 
@@ -83,4 +96,4 @@ with open("day3/input.txt", "r") as inputText:
             print(f"{total}, already seen")
         else:
             print(total)
-            earlier.write(str(total))
+            earlier.write(f"{total}\n")
