@@ -1,56 +1,40 @@
-def nextCharacter(index, text):
-    global total
+def countWords(index, text):
+    words = 0
 
-    if index == []:
-        return
+    if text[index[0] + 1][index[1]] + text[index[0] + 2][index[1]] + text[index[0] + 3][index[1]] == "MAS":
+        words += 1
+    
+    if text[index[0]][index[1] + 1] + text[index[0]][index[1] + 2] + text[index[0]][index[1] + 3] == "MAS":
+        words += 1
+    
+    if text[index[0] - 1][index[1]] + text[index[0] - 2][index[1]] + text[index[0] - 3][index[1]] == "MAS":
+        words += 1
+    
+    if text[index[0]][index[1] - 1] + text[index[0]][index[1] - 2] + text[index[0]][index[1] - 3] == "MAS":
+        words += 1
 
-    for i in index:
-        newIndex = []
+    if text[index[0] + 1][index[1] + 1] + text[index[0] + 2][index[1] + 2] + text[index[0] + 3][index[1] + 3] == "MAS":
+        words += 1
 
-        if text[i[0]][i[1]] == "S":
-            total += 1
-            return
+    if text[index[0] + 1][index[1] - 1] + text[index[0] + 2][index[1] - 2] + text[index[0] + 3][index[1] - 3] == "MAS":
+        words += 1
+    
+    if text[index[0] - 1][index[1] + 1] + text[index[0] - 2][index[1] + 2] + text[index[0] - 3][index[1] + 3] == "MAS":
+        words += 1
 
-        characterToFind = "XMAS"["XMAS".index(text[i[0]][i[1]]) + 1]
+    if text[index[0] - 1][index[1] - 1] + text[index[0] - 2][index[1] - 2] + text[index[0] - 3][index[1] - 3] == "MAS":
+        words += 1
 
-        print(characterToFind)
+    return words
 
-        if text[i[0] + 1][i[0]] == characterToFind:
-            newIndex.append((i[0] + 1, i[0]))
-        
-        elif text[i[0]][i[0] + 1] == characterToFind:
-            newIndex.append((i[0], i[0] + 1))
-        
-        elif text[i[0] - 1][i[0]] == characterToFind:
-            newIndex.append((i[0] - 1, i[0]))
-        
-        elif text[i[0]][i[0] - 1] == characterToFind:
-            newIndex.append((i[0], i[0] - 1))
-
-        elif text[i[0] + 1][i[0] + 1] == characterToFind:
-            newIndex.append((i[0] + 1, i[0] + 1))
-        
-        elif text[i[0] + 1][i[0] - 1] == characterToFind:
-            newIndex.append((i[0] + 1, i[0] - 1))
-        
-        elif text[i[0] - 1][i[0] + 1] == characterToFind:
-            newIndex.append((i[0] - 1, i[0] + 1))
-
-        elif text[i[0] - 1][i[0] - 1] == characterToFind:
-            newIndex.append((i[0] - 1, i[0] - 1))
-
-        nextCharacter(newIndex, text)
-
-with open("day4/testInput.txt", "r") as inputText:
-    global total
+with open("day4/input.txt", "r") as inputText:
     total = 0
 
     contents = inputText.readlines()
 
-    for i in range(len(contents)):
-        for j in range(len(contents[i])):
+    for i in range(3, len(contents) - 3):
+        for j in range(3, len(contents[i]) - 3):
             if contents[i][j] == "X":
-                nextCharacter([(i, j)], contents)
-
+                total += countWords((i, j), contents)
 
     print(total)
