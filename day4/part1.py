@@ -13,6 +13,8 @@ def nextCharacter(index, text):
 
         characterToFind = "XMAS"["XMAS".index(text[i[0]][i[1]]) + 1]
 
+        print(characterToFind)
+
         if text[i[0] + 1][i[0]] == characterToFind:
             newIndex.append((i[0] + 1, i[0]))
         
@@ -25,6 +27,18 @@ def nextCharacter(index, text):
         elif text[i[0]][i[0] - 1] == characterToFind:
             newIndex.append((i[0], i[0] - 1))
 
+        elif text[i[0] + 1][i[0] + 1] == characterToFind:
+            newIndex.append((i[0] + 1, i[0] + 1))
+        
+        elif text[i[0] + 1][i[0] - 1] == characterToFind:
+            newIndex.append((i[0] + 1, i[0] - 1))
+        
+        elif text[i[0] - 1][i[0] + 1] == characterToFind:
+            newIndex.append((i[0] - 1, i[0] + 1))
+
+        elif text[i[0] - 1][i[0] - 1] == characterToFind:
+            newIndex.append((i[0] - 1, i[0] - 1))
+
         nextCharacter(newIndex, text)
 
 with open("day4/testInput.txt", "r") as inputText:
@@ -34,7 +48,7 @@ with open("day4/testInput.txt", "r") as inputText:
     contents = inputText.readlines()
 
     for i in range(len(contents)):
-        for j in range(len(contents)):
+        for j in range(len(contents[i])):
             if contents[i][j] == "X":
                 nextCharacter([(i, j)], contents)
 
