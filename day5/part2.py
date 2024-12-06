@@ -1,3 +1,23 @@
+def perfectOrder(rules):
+    order = []
+    
+    for i in rules:
+        if i[0] in order and i[1] in order:
+            if order.index(i[0]) < order.index(i[1]):
+                continue
+            else:
+                raise Exception("Rule problem")
+
+        elif i[0] in order:
+            order.append()
+        elif i[1] in order:
+            pass
+        else:
+            pass
+
+    print("Finished ordering rules!")
+    return order
+
 def handleRules(input: tuple, rules: list) -> bool:
     for i in rules:
         if i[0] not in input or i[1] not in input:
@@ -27,7 +47,10 @@ def correctLines(input, rules):
         input[index1] = i[1]
         input[index2] = i[0]
 
-    return input[len(input) // 2]
+    if handleRules(input, rules):
+        return input[len(input) // 2]
+    else:
+        correctLines(input, rules)
 
 with open("day5/testInput.txt", "r") as inputText: 
     contents: list = inputText.readlines()
