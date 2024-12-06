@@ -1,4 +1,6 @@
-def handleRules(input: tuple, rules: list) -> bool:
+from statistics import mode
+
+def handleRules(input: list, rules: list) -> bool:
     for i in rules:
         if i[0] not in input or i[1] not in input:
             continue
@@ -7,6 +9,23 @@ def handleRules(input: tuple, rules: list) -> bool:
             return False
         
     return True
+
+def order(rules):
+    lowerRules = []
+
+    for i in rules:
+        lowerRules.append(i[0])
+
+    order = []
+
+    while len(lowerRules) > 0:
+        order.append(mode(lowerRules))
+
+        while order[-1] in lowerRules:
+            lowerRules.remove(order[-1])
+
+    print("Finished ordering")
+    return order
 
 def removeWorkingValues(input, rules): 
     newList = input[::]
@@ -17,16 +36,19 @@ def removeWorkingValues(input, rules):
     return newList
     
 def correctLines(input, rules): 
-    for i in rules:
-        if i[0] not in input or i[1] not in input:
-            continue
-        
-        index1 = input.index(i[0])
-        index2 = input.index(i[1])
+    orderToUse = order(rules)
 
-        input[index1] = i[1]
-        input[index2] = i[0]
+    usedRules = {}
+    wronglyPlacedValues = []
 
+    for i in orderToUse:
+        if i in input:
+            usedRules[i] = input.index(i)
+    
+    for i in orderToUse:
+        pass
+
+    print(usedRules)
     return input[len(input) // 2]
 
 with open("day5/testInput.txt", "r") as inputText: 
@@ -34,15 +56,11 @@ with open("day5/testInput.txt", "r") as inputText:
 
 gap = contents.index("\n")
 
-rules = [tuple(map(int, i.replace("\n", "").split("|"))) for i in contents[:gap]]
+rules = [list(map(int, i.replace("\n", "").split("|"))) for i in contents[:gap]]
 
 lines = [list(map(int, i.split(","))) for i in contents[gap + 1:]]
 
-linesToCorrect = removeWorkingValues(lines, rules)
+lines = removeWorkingValues(lines, rules)
 
-sum = 0
-
-for i in linesToCorrect:
-    sum += correctLines(i, rules)
-
-print(sum)
+for i in lines:
+    print(correctLines(i, rules))
