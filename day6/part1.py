@@ -1,26 +1,28 @@
+def rotate(direction):
+    """
+    Using rotation matrix 
+    [0  1
+    -1 0]
+    """
+    x = direction[1]
+    y = direction[0]
+
+    direction[0] = x
+    direction[1] = -y
+
+    return direction
+
 def move(direction, listToUse, currentCoord):
     listToUse[currentCoord[0]][currentCoord[1]] = "X"
 
-    if listToUse[currentCoord[0] + direction[0]][currentCoord[1] + direction[1]] == "#" and currentCoord[0] != 0 and currentCoord[1] != 0:
-        """
-        Using rotation matrix 
-        [0  1
-        -1 0]
-        """
-        x = direction[1]
-        y = direction[0]
+    if (currentCoord[0] + direction[0]) < 0 or (currentCoord[1] + direction[1]) < 0:
+        raise IndexError("Out of list")
 
-        direction[0] = x
-        direction[1] = -y
+    while listToUse[currentCoord[0] + direction[0]][currentCoord[1] + direction[1]] == "#":
+        direction = rotate(direction)
 
-        listToUse[currentCoord[0] + direction[0]][currentCoord[1] + direction[1]] = "^"
-
-        return listToUse, (currentCoord[0] + direction[0], currentCoord[1] + direction[1]), list(direction)
-
-    else:
-
-        listToUse[currentCoord[0] + direction[0]][currentCoord[1] + direction[1]] = "^"
-        return listToUse, (currentCoord[0] + direction[0], currentCoord[1] + direction[1]), list(direction)
+    listToUse[currentCoord[0] + direction[0]][currentCoord[1] + direction[1]] = "^"
+    return listToUse, (currentCoord[0] + direction[0], currentCoord[1] + direction[1]), list(direction)
 
 with open("day6/input.txt", "r") as inputText:
     contents = [i for i in inputText.readlines()]
