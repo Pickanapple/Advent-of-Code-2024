@@ -1,5 +1,3 @@
-<center>
-
 # [***🧑‍🎄 ADVENT OF CODE 2024! 🎄***](https://adventofcode.com/2024/)
 
 | ***Day*** | ***Part 1*** | ***Part 2*** |
@@ -29,6 +27,3 @@
 |   Day 23  |              |              |
 |   Day 24  |              |              |
 |   Day 25  |              |              |
-
-
-<center>
