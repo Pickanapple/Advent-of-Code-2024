@@ -16,12 +16,14 @@ with open("day6/inputWithPath.txt", "w") as save:
         save.write("\n")"""
 
 #I am assuming that if it takes more than MAXCHECKINGTIME seconds per obstacle that it is stuck in a loop, and therefore automatically
-#Counting it. 
+#Counting it. This was not required in the end
 
 import copy
 import time
 
 MAXCHECKINGTIME = 100
+STARTTIME = time.time()
+
 skippedBecauseOfTimeout = 0
 
 def placeObstacle(location, listToUse):
@@ -88,7 +90,7 @@ for i in range(len(actualContents)):
     for j in range(len(actualContents[i])):
         if actualContents[i][j] == "X":
             startTime = time.time()
-            print(f"Found place for obstacle {i, j}")
+            # print(f"Found place for obstacle {i, j}. {len(actualContents)}")
             listToUse = placeObstacle((i, j), actualContents[::])
             coords = startCoords
             direction = [-1, 0]
@@ -103,4 +105,7 @@ for i in range(len(actualContents)):
                     validObstacles += 1
                     break
 
+print("\n------------\n")
+
 print(f"validObstacles: {validObstacles}\nSkipped because of time: {skippedBecauseOfTimeout}")
+print(f"Took {(time.time() - STARTTIME):.3f} seconds")
