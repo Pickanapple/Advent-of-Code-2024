@@ -1,4 +1,4 @@
-<p style="text-align: center;">
+<center>
 
 # [***🧑‍🎄 ADVENT OF CODE 2024! 🎄***](https://adventofcode.com/2024/)
 
@@ -31,4 +31,4 @@
 |   Day 25  |              |              |
 
 
-</p>
+<center>
