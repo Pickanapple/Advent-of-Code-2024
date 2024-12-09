@@ -10,7 +10,7 @@
 |   Day 6   |    Solved    |    Solved    |
 |   Day 7   |    Solved    |    Solved    |
 |   Day 8   |   Unsolved   |   Unsolved   |
-|   Day 9   |              |              |
+|   Day 9   |   Unsolved   |   Unsolved   |
 |   Day 10  |              |              |
 |   Day 11  |              |              |
 |   Day 12  |              |              |
