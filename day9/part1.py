@@ -8,7 +8,6 @@ def readString(string):
                 list.append(id)
             
             id += 1
-
         
         else:
             for j in range(int(string[i])):
