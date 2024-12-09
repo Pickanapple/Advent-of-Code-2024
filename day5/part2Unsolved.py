@@ -10,22 +10,24 @@ def handleRules(input: list, rules: list) -> bool:
         
     return True
 
-def order(rules):
-    lowerRules = []
+def orderRules(rules):
+    orderedRules = []
 
-    for i in rules:
-        lowerRules.append(i[0])
-
-    order = []
+    lowerRules = [rule[0] for rule in rules] 
+    upperRules = [rule[1] for rule in rules]
 
     while len(lowerRules) > 0:
-        order.append(mode(lowerRules))
+        modeRule = mode(lowerRules)
 
-        while order[-1] in lowerRules:
-            lowerRules.remove(order[-1])
+        while modeRule in lowerRules:
+            lowerRules.remove(modeRule)
 
-    print("Finished ordering")
-    return order
+        orderedRules.append(modeRule)
+
+    orderedRules.append(mode(upperRules) if mode(upperRules) not in orderedRules else None)
+
+    print("Finished ordering rules")
+    return orderedRules
 
 def removeWorkingValues(input, rules): 
     newList = input[::]
@@ -36,7 +38,7 @@ def removeWorkingValues(input, rules):
     return newList
     
 def correctLines(input, rules): 
-    orderToUse = order(rules)
+    orderToUse = orderRules(rules)
 
     usedRules = {}
     wronglyPlacedValues = []
@@ -62,5 +64,8 @@ lines = [list(map(int, i.split(","))) for i in contents[gap + 1:]]
 
 lines = removeWorkingValues(lines, rules)
 
-for i in lines:
-    print(correctLines(i, rules))
+
+rules = orderRules(rules) 
+
+lines.sort(key = rules)
+print(lines)
