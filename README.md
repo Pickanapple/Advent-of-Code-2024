@@ -11,9 +11,9 @@
 |   Day 7   |    Solved    |    Solved    |
 |   Day 8   |   Unsolved   |   Unsolved   |
 |   Day 9   |    Solved    |   Unsolved   |
-|   Day 10  |              |              |
-|   Day 11  |              |              |
-|   Day 12  |              |              |
+|   Day 10  |   Unsolved   |   Unsolved   |
+|   Day 11  |    Solved    |   Unsolved   |
+|   Day 12  |   Unsolved   |   Unsolved   |
 |   Day 13  |              |              |
 |   Day 14  |              |              |
 |   Day 15  |              |              |
