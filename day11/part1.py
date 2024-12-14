@@ -15,7 +15,7 @@ class Stone:
             leftSide, rightSide = str(int(self.value[:midPoint])), str(int(self.value[midPoint:]))
 
             self.value = leftSide
-            contents.insert(contents.index(self) + 1, Stone(rightSide))
+            contents.append(Stone(rightSide))
 
         else:
             self.value = int(self.value) * 2024
@@ -24,14 +24,13 @@ class Stone:
         return str(self.value)
 
 contents = []
-with open("day11/input.txt", "r") as inputText:
+with open("day11/testInput.txt", "r") as inputText:
     contents = [Stone(int(i)) for i in inputText.readline().split()]
 
-for i in range(25):
-    oldList = contents.copy()
+for i in range(6):
+    oldList = contents[::]
     
     for i in oldList:
         i.update()
 
 print([str(i) for i in contents])
-print(len(contents))
