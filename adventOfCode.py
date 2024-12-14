@@ -1,6 +1,8 @@
 #I noticed that I was writing lots of the same code every day
 #so here is a short package for lots of this code
 
+from functools import cache, lru_cache
+
 def getInput(day, input = "regular", replaceNewLines = True):
     if input == "test":
         with open(f"day{day}/testInput.txt", "r") as text:
