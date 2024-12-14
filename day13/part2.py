@@ -27,6 +27,9 @@ while i < len(contents):
         contents[i + 2].replace(" ", "").replace("\n", "").replace("X=", "").replace("Y=", "").split(":")[1].split(","),
     ])
 
+    actualContents[-1][2][0] = 10000000000000 + int(actualContents[-1][2][0])
+    actualContents[-1][2][1] = 10000000000000 + int(actualContents[-1][2][1])
+
     i += 4
 
 # print(actualContents)
@@ -45,7 +48,6 @@ for i in actualContents:
     buttonA, buttonB = float(solution[n]), float(solution[m])
 
     if buttonA.is_integer() and buttonB.is_integer() and abs(buttonA) == buttonA and abs(buttonB) == buttonB: 
-        if buttonA < 100 and buttonB < 100:
-            totalPresses += buttonA * 3 + buttonB
+        totalPresses += buttonA * 3 + buttonB
 
 print(totalPresses)
