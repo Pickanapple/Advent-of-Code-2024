@@ -16,14 +16,14 @@
 |   Day 12  |   $${\color{red}Unsolved}$$   |   $${\color{red}Unsolved}$$   |
 |   Day 13  |   $${\color{red}Unsolved}$$   |   $${\color{red}Unsolved}$$   |
 |   Day 14  |   $${\color{red}Unsolved}$$   |   $${\color{red}Unsolved}$$   |
-|   Day 15  |              |              |
-|   Day 16  |              |              |
-|   Day 17  |              |              |
-|   Day 18  |              |              |
-|   Day 19  |              |              |
-|   Day 20  |              |              |
-|   Day 21  |              |              |
-|   Day 22  |              |              |
-|   Day 23  |              |              |
-|   Day 24  |              |              |
-|   Day 25  |              |              |
+|   Day 15  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
+|   Day 16  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
+|   Day 17  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
+|   Day 18  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
+|   Day 19  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
+|   Day 20  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
+|   Day 21  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
+|   Day 22  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
+|   Day 23  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
+|   Day 24  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
+|   Day 25  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
