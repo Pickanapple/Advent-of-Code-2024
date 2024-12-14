@@ -3,3 +3,4 @@
 **/testInput*.txt
 **/outputs.txt
 /private/
+/__pycache__/
