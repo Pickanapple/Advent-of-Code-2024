@@ -2,19 +2,19 @@
 
 | ***Day*** | ***Part 1*** | ***Part 2*** |
 |:---------:|:------------:|:------------:|
-|   Day 1   |<code style = "color: Green">    Solved    </code>|<code style = "color: Green">    Solved    </code>|
-|   Day 2   |<code style = "color: Green">    Solved    </code>|<code style = "color: Green">    Solved    </code>|
-|   Day 3   |<code style = "color: Green">    Solved    </code>|<code style = "color: Green">    Solved    </code>|
-|   Day 4   |<code style = "color: Green">    Solved    </code>|<code style = "color: Green">    Solved    </code>|
-|   Day 5   |<code style = "color: Green">    Solved    </code>|<code style = "color: Green">    Solved    </code>|
-|   Day 6   |<code style = "color: Green">    Solved    </code>|<code style = "color: Green">    Solved    </code>|
-|   Day 7   |<code style = "color: Green">    Solved    </code>|<code style = "color: Green">    Solved    </code>|
-|   Day 8   |<code style = "color: Red">   Unsolved   </code>|<code style = "color: Red">   Unsolved   </code>|
-|   Day 9   |<code style = "color: Green">    Solved    </code>|<code style = "color: Red">   Unsolved   </code>|
-|   Day 10  |<code style = "color: Red">   Unsolved   </code>|<code style = "color: Red">   Unsolved   </code>|
-|   Day 11  |<code style = "color: Green">    Solved    </code>|<code style = "color: Red">   Unsolved   </code>|
-|   Day 12  |<code style = "color: Red">   Unsolved   </code>|<code style = "color: Red">   Unsolved   </code>|
-|   Day 13  |<code style = "color: Red">   Unsolved   </code>|<code style = "color: Red">   Unsolved   </code>|
+|   Day 1   |   $$$${\color{green} Solved}$$    |   $$$${\color{green} Solved}$$    |
+|   Day 2   |   $$$${\color{green} Solved}$$    |   $$$${\color{green} Solved}$$    |
+|   Day 3   |   $$$${\color{green} Solved}$$    |   $$$${\color{green} Solved}$$    |
+|   Day 4   |   $$$${\color{green} Solved}$$    |   $$$${\color{green} Solved}$$    |
+|   Day 5   |   $$$${\color{green} Solved}$$    |   $$$${\color{green} Solved}$$    |
+|   Day 6   |   $$$${\color{green} Solved}$$    |   $$$${\color{green} Solved}$$    |
+|   Day 7   |   $$$${\color{green} Solved}$$    |   $$$${\color{green} Solved}$$    |
+|   Day 8   |   $$$${\color{red}Unsolved}$$   |   $$$${\color{red}Unsolved}$$   |
+|   Day 9   |   $$$${\color{green} Solved}$$    |   $$$${\color{red}Unsolved}$$   |
+|   Day 10  |   $$$${\color{red}Unsolved}$$   |   $$$${\color{red}Unsolved}$$   |
+|   Day 11  |   $$$${\color{green} Solved}$$    |   $$$${\color{red}Unsolved}$$   |
+|   Day 12  |   $$$${\color{red}Unsolved}$$   |   $$$${\color{red}Unsolved}$$   |
+|   Day 13  |   $$$${\color{red}Unsolved}$$   |   $$$${\color{red}Unsolved}$$   |
 |   Day 14  |              |              |
 |   Day 15  |              |              |
 |   Day 16  |              |              |
