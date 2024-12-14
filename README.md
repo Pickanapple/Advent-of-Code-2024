@@ -15,7 +15,7 @@
 |   Day 11  |   $${\color{green} Solved}$$    |   $${\color{red}Unsolved}$$   |
 |   Day 12  |   $${\color{red}Unsolved}$$   |   $${\color{red}Unsolved}$$   |
 |   Day 13  |   $${\color{red}Unsolved}$$   |   $${\color{red}Unsolved}$$   |
-|   Day 14  |              |              |
+|   Day 14  |   $${\color{red}Unsolved}$$   |   $${\color{red}Unsolved}$$   |
 |   Day 15  |              |              |
 |   Day 16  |              |              |
 |   Day 17  |              |              |
