@@ -2,19 +2,19 @@
 
 | ***Day*** | ***Part 1*** | ***Part 2*** |
 |:---------:|:------------:|:------------:|
-|   Day 1   |    Solved    |    Solved    |
-|   Day 2   |    Solved    |    Solved    |
-|   Day 3   |    Solved    |    Solved    |
-|   Day 4   |    Solved    |    Solved    |
-|   Day 5   |    Solved    |    Solved    |
-|   Day 6   |    Solved    |    Solved    |
-|   Day 7   |    Solved    |    Solved    |
-|   Day 8   |   Unsolved   |   Unsolved   |
-|   Day 9   |    Solved    |   Unsolved   |
-|   Day 10  |   Unsolved   |   Unsolved   |
-|   Day 11  |    Solved    |   Unsolved   |
-|   Day 12  |   Unsolved   |   Unsolved   |
-|   Day 13  |   Unsolved   |   Unsolved   |
+|   Day 1   |<code style = "color: Green">    Solved    </code>|<code style = "color: Green">    Solved    </code>|
+|   Day 2   |<code style = "color: Green">    Solved    </code>|<code style = "color: Green">    Solved    </code>|
+|   Day 3   |<code style = "color: Green">    Solved    </code>|<code style = "color: Green">    Solved    </code>|
+|   Day 4   |<code style = "color: Green">    Solved    </code>|<code style = "color: Green">    Solved    </code>|
+|   Day 5   |<code style = "color: Green">    Solved    </code>|<code style = "color: Green">    Solved    </code>|
+|   Day 6   |<code style = "color: Green">    Solved    </code>|<code style = "color: Green">    Solved    </code>|
+|   Day 7   |<code style = "color: Green">    Solved    </code>|<code style = "color: Green">    Solved    </code>|
+|   Day 8   |<code style = "color: Red">   Unsolved   </code>|<code style = "color: Red">   Unsolved   </code>|
+|   Day 9   |<code style = "color: Green">    Solved    </code>|<code style = "color: Red">   Unsolved   </code>|
+|   Day 10  |<code style = "color: Red">   Unsolved   </code>|<code style = "color: Red">   Unsolved   </code>|
+|   Day 11  |<code style = "color: Green">    Solved    </code>|<code style = "color: Red">   Unsolved   </code>|
+|   Day 12  |<code style = "color: Red">   Unsolved   </code>|<code style = "color: Red">   Unsolved   </code>|
+|   Day 13  |<code style = "color: Red">   Unsolved   </code>|<code style = "color: Red">   Unsolved   </code>|
 |   Day 14  |              |              |
 |   Day 15  |              |              |
 |   Day 16  |              |              |
