@@ -12,6 +12,7 @@ def readString(string):
             for j in range(int(string[i])):
                 list.append(".")
     return list
+
 def move(listToUse: list):
     while "." in listToUse:
         for i in range(len(listToUse) - 1, -1, -1):
@@ -20,6 +21,14 @@ def move(listToUse: list):
                 break
     
     return listToUse
+
+def findNextValue(listToUse, ID):
+    if ID == 0:
+        return False
+
+    index = listToUse.find(str(int(ID) - 1))
+
+    return index
 
 def calculate(listToUse: list):
     total = 0

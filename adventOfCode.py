@@ -21,5 +21,13 @@ def getInput(day, input = "regular", replaceNewLines = True):
     return contents
 
 if __name__ == "__main__":
+    import sys
+    import os
+
+    directory = os.path.dirname(os.path.abspath(__file__))
+    parent_directory = os.path.dirname(directory)
+    sys.path.append(parent_directory)
+    print(parent_directory)
+
     print(getInput(3))
     print(getInput(3, "test"))
