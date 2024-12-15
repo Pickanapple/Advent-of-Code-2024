@@ -2,5 +2,6 @@
 **/input*.csv
 **/testInput*.txt
 **/outputs.txt
+**/seconds.txt
 /private/
 /__pycache__/
