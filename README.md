@@ -17,7 +17,7 @@
 |   Day 13  |   $${\color{green} Solved}$$    |   $${\color{green} Solved}$$    |
 |   Day 14  |   $${\color{green} Solved}$$    |   $${\color{green} Solved}$$    |
 |   Day 15  |   $${\color{red}Unsolved}$$   |   $${\color{red}Unsolved}$$   |
-|   Day 16  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
+|   Day 16  |   $${\color{red}Unsolved}$$   |   $${\color{red}Unsolved}$$   |
 |   Day 17  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
 |   Day 18  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
 |   Day 19  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
