@@ -1,5 +1,13 @@
 directionDecoder = {"^": (-1, 0), ">": (0, 1), "v": (1, 0), "<": (0, -1)}
 
+def printBoard(board):
+    for j in board:
+        for k in j: 
+            print(k, end = "")
+        
+        print()
+
+
 def move(moveChosen, coordinates, listToUse):
     direction = directionDecoder[moveChosen]
 
@@ -15,29 +23,29 @@ def move(moveChosen, coordinates, listToUse):
         i = 1
         
         if direction[0] == 0:
-            while listToUse[coordinates[0]][coordinates[1] + direction[1] + i] == "O":
+            while listToUse[coordinates[0]][coordinates[1] + (direction[1] * i)] == "O":
                 i += 1
 
                 try: 
-                    if listToUse[coordinates[0]][coordinates[1] + direction[1] + i] == "#":
+                    if listToUse[coordinates[0]][coordinates[1] + (direction[1] * i)] == "#":
                         return coordinates, listToUse
                 except: 
                     return coordinates, listToUse
 
-            listToUse[coordinates[0]][coordinates[1] + direction[1] + i] = "O"
+            listToUse[coordinates[0]][coordinates[1] + (direction[1] * i)] = "O"
             listToUse[coordinates[0]][coordinates[1] + direction[1]] = "@"
 
         else:
-            while listToUse[coordinates[0] + direction[0] + i][coordinates[1]] == "O":
+            while listToUse[coordinates[0] + (direction[0] * i)][coordinates[1]] == "O":
                 i += 1
 
                 try: 
-                    if listToUse[coordinates[0 + direction[0] + i]][coordinates[1]] == "#":
+                    if listToUse[coordinates[0] + (direction[0] * i)][coordinates[1]] == "#":
                         return coordinates, listToUse
                 except: 
                     return coordinates, listToUse
                 
-            listToUse[coordinates[0] + direction[0] + i][coordinates[1]] = "O"
+            listToUse[coordinates[0] + (direction[0] * i)][coordinates[1]] = "O"
             listToUse[coordinates[0] + direction[0]][coordinates[1]] = "@"
 
         listToUse[coordinates[0]][coordinates[1]] = "."
@@ -74,8 +82,4 @@ for i in range(len(board)):
 for i in moves:
     coordinates, board = move(i, coordinates, board)
 
-# for i in board:
-#     for j in i: 
-#         print(j, end = "")
-    
-#     print()
+printBoard(board)
