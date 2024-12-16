@@ -7,6 +7,8 @@ def printBoard(board):
         
         print()
 
+def GPS(position):
+    return position[0] * 100 + position[1]
 
 def move(moveChosen, coordinates, listToUse):
     direction = directionDecoder[moveChosen]
@@ -61,7 +63,7 @@ def move(moveChosen, coordinates, listToUse):
         return coordinates, listToUse
 
 
-with open ("day15/testInput.txt", "r") as f:
+with open ("day15/input.txt", "r") as f:
     contents = f.readlines()
 
     moves = ""
@@ -83,3 +85,12 @@ for i in moves:
     coordinates, board = move(i, coordinates, board)
 
 printBoard(board)
+
+total = 0
+
+for i in range(len(board)):
+    for j in range(len(board[i])):
+        if board[i][j] == "O":
+            total += GPS((i, j))
+
+print(f"\nGPS sum: {total}")
