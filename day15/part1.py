@@ -93,4 +93,6 @@ for i in range(len(board)):
         if board[i][j] == "O":
             total += GPS((i, j))
 
+    printBoard(board)
+
 print(f"\nGPS sum: {total}")
