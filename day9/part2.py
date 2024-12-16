@@ -13,22 +13,21 @@ def readString(string):
                 list.append(".")
     return list
 
-def move(listToUse: list):
-    while "." in listToUse:
-        for i in range(len(listToUse) - 1, -1, -1):
-            if listToUse[i] != ".":
-                listToUse[listToUse.index(".")] = listToUse.pop(i)
-                break
+def move(listToUse: list, coord1, coord2):
+    length = coord2 - coord1
+    listAsString = ""
+
+    for i in listToUse:
+        if i == ".": 
+            listAsString += "."
+        else: 
+            listAsString += "#"
+
+    if "." not in listAsString[:coord1]:
+        return listToUse
+    else:
+        print(True)
     
-    return listToUse
-
-def findNextValue(listToUse, ID):
-    if ID == 0:
-        return False
-
-    index = listToUse.find(str(int(ID) - 1))
-
-    return index
 
 def calculate(listToUse: list):
     total = 0
@@ -38,4 +37,8 @@ def calculate(listToUse: list):
 
 with open("day9/input.txt", "r") as inputText:
     contents = inputText.readline().removesuffix("\n")
-    print(calculate(move(readString(contents))))
+    # print(calculate(move(readString(contents))))
+
+listToUse = [".", ".", ".", ".", "."]
+
+move(listToUse, 3, 5)
