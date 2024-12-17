@@ -10,7 +10,7 @@
 |   Day 6   |   $${\color{green} Solved}$$    |   $${\color{green} Solved}$$    |
 |   Day 7   |   $${\color{green} Solved}$$    |   $${\color{green} Solved}$$    |
 |   Day 8   |   $${\color{red}Unsolved}$$   |   $${\color{red}Unsolved}$$   |
-|   Day 9   |   $${\color{green} Solved}$$    |   $${\color{red}Unsolved}$$   |
+|   Day 9   |   $${\color{green} Solved}$$    |   $${\color{green} Solved}$$    |
 |   Day 10  |   $${\color{green} Solved}$$    |   $${\color{green} Solved}$$    |
 |   Day 11  |   $${\color{green} Solved}$$    |   $${\color{red}Unsolved}$$   |
 |   Day 12  |   $${\color{red}Unsolved}$$   |   $${\color{red}Unsolved}$$   |
@@ -18,7 +18,7 @@
 |   Day 14  |   $${\color{green} Solved}$$    |   $${\color{green} Solved}$$    |
 |   Day 15  |   $${\color{green} Solved}$$    |   $${\color{red}Unsolved}$$   |
 |   Day 16  |   $${\color{red}Unsolved}$$   |   $${\color{red}Unsolved}$$   |
-|   Day 17  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
+|   Day 17  |   $${\color{red}Unsolved}$$   |   $${\color{red}Unsolved}$$   |
 |   Day 18  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
 |   Day 19  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
 |   Day 20  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
