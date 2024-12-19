@@ -8,13 +8,15 @@ def distance(index1: tuple, index2: tuple):
 def findFunction(point1: tuple, point2: tuple):
     if point2[1] > point1[1]:
         gradiant = (point2[0] - point1[0]) / (point2[1] - point1[1]) #Our 2d list has y before x
-    else: 
+    elif point2[1] < point1[1]: 
         gradiant = (point1[0] - point2[0]) / (point1[1] - point2[1]) #Our 2d list has y before x
+    else:
+        gradiant = 0
 
     #y - y1 = m(x - x1)
     return lambda x: gradiant * (x - point1[1]) + point1[0]
 
-def findAntiNodes(listToUse, coords, alreadyFoundPairs: set, onTopOfOtherNodes: int):
+def findAntiNodes(listToUse, coords, alreadyFoundPairs: set, foundCoords: set):
     """
     Returns: 
         listToUse, alreadyFound Pairs
@@ -38,30 +40,47 @@ def findAntiNodes(listToUse, coords, alreadyFoundPairs: set, onTopOfOtherNodes: 
         
         xDistance = abs(i[1] - coords[1])
 
-        x1, x2 = (coords[1] - xDistance), (i[1] + xDistance)
+        if coords[1] > i[1]:
+            x1, x2 = coords[1] + xDistance, i[1] - xDistance
+        else:
+            x1, x2 = coords[1] - xDistance, i[1] + xDistance
+
         y1, y2 = func(x1), func(x2)
 
         try: 
             if float(x1).is_integer() and y1.is_integer():
-                alreadyFoundPairs.add((y1, x1))
                 if listToUse[int(y1)][int(x1)] == ".":
                     listToUse[int(y1)][int(x1)] = "#"
 
-                elif listToUse[int(y1)][int(x1)] != "#":
-                    onTopOfOtherNodes += 1
+                    if abs(x1) == x1 and abs(x2) == x2:
+                        foundCoords.add((int(x1), int(y1)))
+                        alreadyFoundPairs.add((coords, (int(y1), int(x1))))
 
-            if float(x2).is_integer() and y2.is_integer():
-                alreadyFoundPairs.add((y2, x2))
+                elif listToUse[int(y1)][int(x1)] != "#" and (int(y1), int(x1)) != coords and (int(y1), int(x1)) != i and (int(x1), int(y1)) not in foundCoords:
+                    print((int(y1), int(x1)) in foundCoords)
+
+                    if abs(y1) == y1 and abs(x1) == x1:
+                        alreadyFoundPairs.add((coords, (int(y1), int(x1))))
+                        foundCoords.add((int(x1), int(y1)))
+
+            if float(x2).is_integer() and float(y2).is_integer():
                 if listToUse[int(y2)][int(x2)] == ".":
-                    listToUse[int(y2)][int(x2)] = "#"
+                    if abs(y2) == y2 and abs(x2) == x2:
+                        listToUse[int(y2)][int(x2)] = "#"
+                        foundCoords.add((int(x2), int(y2)))
+                        alreadyFoundPairs.add((coords, (int(y2), int(x2))))
 
-                elif listToUse[int(y2)][int(x2)] != "#":
-                    onTopOfOtherNodes += 1
+            elif listToUse[int(y2)][int(x2)] != "#" and (int(y2), int(x2)) != coords and (int(y2), int(x2)) != i and (int(x2), int(y2)) not in foundCoords:
+                    print((int(y2), int(x2)) in foundCoords)
+                    
+                    if abs(y2) == y2 and abs(x2) == x2:
+                        foundCoords.add((int(x2), int(y2)))
+                        alreadyFoundPairs.add((coords, (int(y2), int(x2))))
 
-        except: 
+        except IndexError: 
             pass
 
-    return listToUse, alreadyFoundPairs, onTopOfOtherNodes
+    return listToUse, alreadyFoundPairs, foundCoords
 
 def printBoard(board):
     for i in board:
@@ -73,7 +92,9 @@ def printBoard(board):
 with open("day8/testInput.txt", "r") as f:
     contents = [[j for j in i.replace("\n", "")] for i in f.readlines()]
 
+foundCoordPairs = set()
 foundCoords = set()
+
 onTop = 0
 
 for i in range(len(contents)):
@@ -81,18 +102,12 @@ for i in range(len(contents)):
         if contents[i][j] == "." or contents[i][j] == "#":
             continue
         else:
-            contents, foundCoords, onTop = findAntiNodes(contents, (i, j), foundCoords, onTop)
+            contents, foundCoordPairs, foundCoords = findAntiNodes(contents, (i, j), foundCoordPairs, foundCoords)
+            print(foundCoords)
 
 printBoard(contents)
 
 print()
 
-totalAntiNodes = 0
-
-for i in contents:
-    for j in i:
-        if j == "#":
-            totalAntiNodes += 1
-
-print(onTop)
-print(totalAntiNodes + onTop)
+print(len(foundCoords))
+print(foundCoords)
