@@ -63,7 +63,7 @@ def move(moveChosen, coordinates, listToUse):
         return coordinates, listToUse
 
 
-with open ("day15/input.txt", "r") as f:
+with open ("day15/testInput.txt", "r") as f:
     contents = f.readlines()
 
     moves = ""
@@ -72,8 +72,21 @@ with open ("day15/input.txt", "r") as f:
     for i in range(contents.index("\n"), len(contents)):
         moves += contents[i].replace("\n", "")
 
-    for i in range(contents.index("\n")):
-        board.append([i for i in contents[i].replace("\n", "")])
+    for i in contents:
+        board.append([])
+        for j in range(i.index("\n")):
+            if i[j] == "." or i[j] == "#":
+                board[-1].append(i[j])
+                board[-1].append(i[j])
+            elif i[j] == "O": 
+                board[-1].append("[")
+                board[-1].append("]")
+            elif i[j] == "@": 
+                board[-1].append("@")
+                board[-1].append(".")
+
+printBoard(board)
+# input()
 
 for i in range(len(board)):
     for j in range(len(board[i])):
