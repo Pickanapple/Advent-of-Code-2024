@@ -19,8 +19,8 @@
 |   Day 15  |   $${\color{green} Solved}$$    |   $${\color{red}Unsolved}$$   |
 |   Day 16  |   $${\color{red}Unsolved}$$   |   $${\color{red}Unsolved}$$   |
 |   Day 17  |   $${\color{red}Unsolved}$$   |   $${\color{red}Unsolved}$$   |
-|   Day 18  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
-|   Day 19  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
+|   Day 18  |   $${\color{red}Unsolved}$$   |   $${\color{red}Unsolved}$$   |
+|   Day 19  |   $${\color{red}Unsolved}$$   |   $${\color{red}Unsolved}$$   |
 |   Day 20  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
 |   Day 21  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
 |   Day 22  |  $${\color{orange}Unreleased}$$   |  $${\color{orange}Unreleased}$$   |
