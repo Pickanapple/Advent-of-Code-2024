@@ -12,6 +12,7 @@ def readString(string):
             for j in range(int(string[i])):
                 list.append(".")
     return list
+
 def move(listToUse: list):
     while "." in listToUse:
         for i in range(len(listToUse) - 1, -1, -1):
