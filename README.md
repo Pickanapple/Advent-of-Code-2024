@@ -9,7 +9,7 @@
 |   Day 5   |   $${\color{green} Solved}$$    |   $${\color{green} Solved}$$    |
 |   Day 6   |   $${\color{green} Solved}$$    |   $${\color{green} Solved}$$    |
 |   Day 7   |   $${\color{green} Solved}$$    |   $${\color{green} Solved}$$    |
-|   Day 8   |   $${\color{green} Solved}$$    |   $${\color{red}Unsolved}$$   |
+|   Day 8   |   $${\color{green} Solved}$$    |   $${\color{green} Solved}$$    |
 |   Day 9   |   $${\color{green} Solved}$$    |   $${\color{green} Solved}$$    |
 |   Day 10  |   $${\color{green} Solved}$$    |   $${\color{green} Solved}$$    |
 |   Day 11  |   $${\color{green} Solved}$$    |   $${\color{red}Unsolved}$$   |
