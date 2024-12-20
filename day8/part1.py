@@ -52,29 +52,33 @@ def findAntiNodes(listToUse, coords, alreadyFoundPairs: set, foundCoords: set):
                 if listToUse[int(y1)][int(x1)] == ".":
                     listToUse[int(y1)][int(x1)] = "#"
 
-                    if abs(x1) == x1 and abs(x2) == x2:
-                        foundCoords.add((int(x1), int(y1)))
+                    if abs(int(x1)) == int(x1) and abs(int(y1)) == int(y1):
+                        foundCoords.add((int(y1), int(x1)))
                         alreadyFoundPairs.add((coords, (int(y1), int(x1))))
 
                 elif listToUse[int(y1)][int(x1)] != "#" and (int(y1), int(x1)) != coords and (int(y1), int(x1)) != i and (int(x1), int(y1)) not in foundCoords:
-                    print((int(y1), int(x1)) in foundCoords)
+                    print("At an antenna")
 
-                    if abs(y1) == y1 and abs(x1) == x1:
+                    if abs(int(y1)) == int(y1) and abs(int(x1)) == int(x1):
                         alreadyFoundPairs.add((coords, (int(y1), int(x1))))
-                        foundCoords.add((int(x1), int(y1)))
+                        foundCoords.add((int(y1), int(x1)))
+        except IndexError:
+            pass
 
+        try:
             if float(x2).is_integer() and float(y2).is_integer():
                 if listToUse[int(y2)][int(x2)] == ".":
-                    if abs(y2) == y2 and abs(x2) == x2:
+                    if abs(int(y2)) == int(y2) and abs(int(x2)) == int(x2):
+                        print("At an antenna")
                         listToUse[int(y2)][int(x2)] = "#"
-                        foundCoords.add((int(x2), int(y2)))
+                        foundCoords.add((int(y2), int(x2)))
                         alreadyFoundPairs.add((coords, (int(y2), int(x2))))
 
             elif listToUse[int(y2)][int(x2)] != "#" and (int(y2), int(x2)) != coords and (int(y2), int(x2)) != i and (int(x2), int(y2)) not in foundCoords:
-                    print((int(y2), int(x2)) in foundCoords)
+                    # print((int(y2), int(x2)) in foundCoords)
                     
-                    if abs(y2) == y2 and abs(x2) == x2:
-                        foundCoords.add((int(x2), int(y2)))
+                    if abs(int(y2)) == int(y2) and abs(int(x2)) == int(x2):
+                        foundCoords.add((int(y2), int(x2)))
                         alreadyFoundPairs.add((coords, (int(y2), int(x2))))
 
         except IndexError: 
@@ -103,11 +107,11 @@ for i in range(len(contents)):
             continue
         else:
             contents, foundCoordPairs, foundCoords = findAntiNodes(contents, (i, j), foundCoordPairs, foundCoords)
-            print(foundCoords)
+            # print(foundCoords)
 
 printBoard(contents)
 
 print()
 
 print(len(foundCoords))
-print(foundCoords)
+# print(foundCoords)
