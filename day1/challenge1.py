@@ -1,4 +1,7 @@
 import pandas as pd
+import math as m
+
+print(m.pi)
 
 data = pd.read_csv("Advent-of-Code-2024\day1\input.csv")
 
