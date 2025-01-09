@@ -109,3 +109,5 @@ for i in range(len(board)):
     printBoard(board)
 
 print(f"\nGPS sum: {total}")
+
+# THIS CODE IS WAY TOO LONG!
