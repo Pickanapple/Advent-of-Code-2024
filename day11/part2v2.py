@@ -5,7 +5,7 @@ def update(value):
 
     try:
         if contents[value] > 0:
-           contents[value] -= 1
+            contents[value] -= 1
         else: 
             contents[value] = 0
 
